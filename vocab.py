@@ -14,11 +14,9 @@ class VocabTriad(object):
         self.audio = self.load_audio()
 
     def load_audio(self):
+        print(self.character, self.english)
         pinyin2 = character_to_pinyin(self.character)
-        if not path.exists(f"data/{pinyin2}.mp3"):
-            print(f"Downloading audio for {pinyin2}")
-            download_samples([pinyin2])
-        return f'data/{pinyin2}.mp3'
+        return download_samples(pinyin2, "data/")
 
 
 def create_triad_from_string(data):
