@@ -28,6 +28,7 @@ def clean_vocab_list(vocab_list):
         word.english = word.english.lower()
         cleaned.append(word)
         hanzi.append(word.hanzi)
+    print(f"Finished cleaning {len(cleaned)} words")
     return cleaned
 
 
